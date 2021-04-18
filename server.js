@@ -35,7 +35,11 @@ app.get('/api/notes', (req, res) => {
         data => {
             const notes = JSON.parse(data)
 
+            req.body.id = notes.length.toString()
+
             notes.push(req.body)
+
+            console.log(req.body)
 
             writeFile (
                 path.join(__dirname, '/db/db.json'),
@@ -52,23 +56,18 @@ app.get('/api/notes', (req, res) => {
 
   });
 
-  app.delete('/api/notes/:id', (req, res) => {
+  //app.delete('/api/notes/:id', (req, res) => {
+    
+    //readFile(
+      //  path.join(__dirname, '/db/db.json'),
+        //"utf8"
+    //)
+    //.then(
+      //  data => {
+        //    if 
+            //var filteredNotes = notes.filter()
 
-    //req.params.id
-
-    readFile(
-        path.join(__dirname, '/db/db.json'),
-        "utf8"
-    )
-    .then(
-        data => {
-            const notes = JSON.parse(data)
-
-            var filteredNotes = notes.filter 
-
-        })
-  })
-
+            //console.log(filteredNotes);
 
   app.get('/notes', (req,res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
@@ -82,6 +81,4 @@ app.get('*', (req,res) => {
     console.log(`API server now on port ${PORT}!`);
   });
 
-  //add id to req.body in POST 
-
-  //in delete rte where eadh notes id != that req.params(note.id) 
+  //in delete rte where each notes id != that req.params(note.id) 
