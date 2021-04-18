@@ -1,0 +1,24 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andiimagyar/NoteTkr.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/andiimagyar/NoteTkr/issues"
+  },
+  "homepage": "https://github.com/andiimagyar/NoteTkr#readme"
+}
